@@ -34,7 +34,7 @@ function Services() {
                                 
                             </div>
                             <div className='w-full flex items-center text-[12px]  justify-center '>
-                            <NavLink to="/AstronomyPic">
+                            <NavLink to="/GatheringAstrologer/AstronomyPic">
                                 <button className='  flex md:w-[150px] md:h-[50px] w-[120px]  button-view  gap-2 items-center justify-center '>View More<GiCubes /> </button>
                             </NavLink>
                             

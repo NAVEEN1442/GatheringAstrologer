@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import img1 from '../Components/Images/LogoT.jpg'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <div className=' md:gap-0 gap-40  mx-auto mt-3 text-white justify-evenly font-bold text-[22px] rounded-xl flex items-center w-11/12  '>
 
-    <NavLink to="/">
+    <NavLink to="/GatheringAstrologer">
     <img src={img1} alt='Not Available Due to some error' className=' w-[100px] h-[100px] md:w-[150px] md:h-[150px]' />
     </NavLink>
    
@@ -29,7 +29,7 @@ function Navbar() {
 
           ) : (
             
-            <NavLink to={"/login"} >
+            <NavLink to={"/GatheringAstrologer/login"} >
             <button className='button-30 w-[120px] md:w-[150px] '>Login/SignUp</button>
             </NavLink>
             

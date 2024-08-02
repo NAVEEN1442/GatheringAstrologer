@@ -50,7 +50,7 @@ function Main() {
 
       </div>
         <div className='w-full flex justify-center'>
-        <NavLink to="/Services">
+        <NavLink to="/GatheringAstrologer/Services">
       <button className=' h-[80px] button-30 text-xl  mt-5 items-center  gap-2 flex justify-center ' >
               Explore <span className='flex '><FaRegCompass /></span>
         </button>

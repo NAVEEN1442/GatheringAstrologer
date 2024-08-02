@@ -33,7 +33,7 @@ function Welcome() {
       console.log("in the if wala else")
       setIsLoggedIn(true);
      setUsername("");
-      navigate("/");
+      navigate("/GatheringAstrologer");
       
     }
     else{
@@ -53,7 +53,7 @@ function Welcome() {
     <div className=' pl-6  md:pl-12'>
 
 <div className=' flex items-center   h-[100px] '>
-<NavLink to="/">
+<NavLink to="/GatheringAstrologer">
 <button className=' flex gap-2 text-[20px] items-center ml-5 mt-5 w-[50px] button-30 ' ><AiFillHome /></button>
 </NavLink>
           
@@ -100,7 +100,7 @@ function Welcome() {
     <div><button onClick={loginHandler}  className='button-30 gap-2 flex  ' >SignUp <span><SlLogin /></span></button></div>
   
        
-        <NavLink to="/login">
+        <NavLink to="/GatheringAstrologer/login">
         <div className=' underline cursor-pointer'>
           Already have an account ( LogIn )
         </div>

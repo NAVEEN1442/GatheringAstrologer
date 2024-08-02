@@ -15,19 +15,21 @@ import { AuthProvider } from './Components/AuthContext/AuthContext';
 
 
 function App() {
-
+  console.log("HI");
   return (
     <div className=' font-CAS overflow-scroll App  text-white flex flex-col background md:w-full overflow-x-hidden h-screen bg-blue-900 '>
   <AuthProvider>
 
+  
+
   <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/Services" element={<Services />}/>
-        <Route path='/AstronomyPic' element={<AstronomyPic/>}/>
-        <Route path='/MarsRover' element={<MarsRover/>}/>
-        <Route path='/MarsWeather' element={<MarsWeather/>}/>
-        <Route  path='/login' element={<Login/>}/>
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path="/GatheringAstrologer" element={<Home />}/>
+        <Route path="/GatheringAstrologer/Services" element={<Services />}/>
+        <Route path='/GatheringAstrologer/AstronomyPic' element={<AstronomyPic/>}/>
+        <Route path='/GatheringAstrologer/MarsRover' element={<MarsRover/>}/>
+        <Route path='/GatheringAstrologer/MarsWeather' element={<MarsWeather/>}/>
+        <Route  path='/GatheringAstrologer/login' element={<Login/>}/>
+        <Route path='/GatheringAstrologer/signup' element={<Signup/>}/>
       </Routes>
       
   </AuthProvider>
