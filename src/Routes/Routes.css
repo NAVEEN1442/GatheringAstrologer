@@ -34,20 +34,12 @@
    }
 }
 .login{
-  @media (min-width: 640px) { 
+
     background-repeat: no-repeat;
-    background-size: 450px;
+    background-size: fit;
     background-position: right bottom;
     background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/giphy.gif");
-   }
-  
-    background-repeat: no-repeat;
-    background-size: 300px;
-    background-position: right bottom;
-    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/giphy.gif");
-   
- 
-  
+
 }
 .temp{
   @media (min-width: 640px) { 
