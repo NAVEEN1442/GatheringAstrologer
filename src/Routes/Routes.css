@@ -36,9 +36,9 @@
 .login{
   @media (min-width: 640px) { 
     background-repeat: no-repeat;
-    background-size: fit;
-    background-position: right bottom;
-    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\MarsWeather.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\curiosity.jpg");
    }
    @media (max-width: 640px) { 
     background-repeat: no-repeat;
