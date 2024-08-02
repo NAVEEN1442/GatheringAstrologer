@@ -42,7 +42,7 @@ function Login() {
 
   return (
     <div className=' w-full flex justify-center items-center   gap-4 mx-auto h-screen  ' >
-    <div className='login flex  border-4 h-[700px]  md:w-10/12 md:h-[600px] bg-slate-900 '>
+    <div className='login bg-contain md:bg-auto flex  border-4 h-[700px]  md:w-10/12 md:h-[600px] bg-slate-900 '>
 
 
     <div className=' pl-6  md:pl-12'>
