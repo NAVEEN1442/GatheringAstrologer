@@ -8,6 +8,7 @@ import { SlLogin } from "react-icons/sl";
 
 import { useAuth } from '../Components/AuthContext/AuthContext';
 import { toast } from "react-toastify";
+import '../Routes/Routes.css'
 
 function Login() {
 
