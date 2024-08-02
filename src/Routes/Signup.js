@@ -101,7 +101,7 @@ function Welcome() {
   
        
         <NavLink to="/GatheringAstrologer/login">
-        <div className=' underline cursor-pointer'>
+        <div className=' text-blue-500 underline cursor-pointer'>
           Already have an account ( LogIn )
         </div>
         </NavLink>

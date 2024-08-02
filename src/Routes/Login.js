@@ -93,7 +93,7 @@ function Login() {
     
         
         <NavLink to="/GatheringAstrologer/signup">
-        <div className=' underline cursor-pointer'>
+        <div className=' underline text-blue-500 cursor-pointer'>
           I don't have an account (Sign Up)!
         </div>
         </NavLink>
