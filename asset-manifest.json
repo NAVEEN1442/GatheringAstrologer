@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GatheringAstrologer/static/css/main.a31b3b6a.css",
-    "main.js": "/GatheringAstrologer/static/js/main.6f1066c8.js",
+    "main.css": "/GatheringAstrologer/static/css/main.b0ba143b.css",
+    "main.js": "/GatheringAstrologer/static/js/main.68d7b640.js",
     "static/js/453.a6a97343.chunk.js": "/GatheringAstrologer/static/js/453.a6a97343.chunk.js",
     "static/media/PictureDay.jpg": "/GatheringAstrologer/static/media/PictureDay.9c56856dd8f399e4c888.jpg",
     "static/media/Mars_Cam.gif": "/GatheringAstrologer/static/media/Mars_Cam.2d841f8eb3a786e43464.gif",
@@ -12,12 +12,12 @@
     "static/media/giphy.gif": "/GatheringAstrologer/static/media/giphy.6da688bb17bdf5464e47.gif",
     "static/media/LogoA.jpg": "/GatheringAstrologer/static/media/LogoA.940c759959b8dbab4b31.jpg",
     "index.html": "/GatheringAstrologer/index.html",
-    "main.a31b3b6a.css.map": "/GatheringAstrologer/static/css/main.a31b3b6a.css.map",
-    "main.6f1066c8.js.map": "/GatheringAstrologer/static/js/main.6f1066c8.js.map",
+    "main.b0ba143b.css.map": "/GatheringAstrologer/static/css/main.b0ba143b.css.map",
+    "main.68d7b640.js.map": "/GatheringAstrologer/static/js/main.68d7b640.js.map",
     "453.a6a97343.chunk.js.map": "/GatheringAstrologer/static/js/453.a6a97343.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a31b3b6a.css",
-    "static/js/main.6f1066c8.js"
+    "static/css/main.b0ba143b.css",
+    "static/js/main.68d7b640.js"
   ]
 }
