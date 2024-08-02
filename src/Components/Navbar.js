@@ -17,7 +17,7 @@ function Navbar() {
         <div className='md:flex hidden gap-11'>
             <a href='#info'><button>Contact</button></a>
             <a href='#info'><button>About</button></a>
-            <NavLink to="/Services">
+            <NavLink to="/GatheringAstrologer/Services">
             <button>Services</button>
             </NavLink>
             
