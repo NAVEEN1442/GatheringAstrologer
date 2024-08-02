@@ -1,0 +1,82 @@
+
+.scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+.bg1{
+    background: #2b2f77;
+    background: -webkit-linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+    background: linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+    
+  }
+.flip{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  
+}
+.Wet{
+  @media (min-width: 640px) { 
+    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/MarsWeather.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+  
+   }
+   @media (max-width: 640px) { 
+    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/MarsWeather.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    
+   }
+}
+.login{
+  @media (min-width: 640px) { 
+    background-repeat: no-repeat;
+    background-size: fit;
+    background-position: right bottom;
+    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/Log.gif");
+   }
+   @media (max-width: 640px) { 
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: right bottom;
+    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/Log.gif");
+   }
+ 
+  
+}
+.temp{
+  @media (min-width: 640px) { 
+
+    display: flex;
+  
+   }
+   @media (max-width: 640px) { 
+
+    display: flex;
+    flex-wrap: wrap;
+    
+   }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rowdies:wght@300;400;700&display=swap');
+
+.h1-font{
+  font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+.h2-font{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 0.4;
+  color: #ec4738;
+}

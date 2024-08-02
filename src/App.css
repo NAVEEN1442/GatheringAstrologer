@@ -1,0 +1,60 @@
+
+.background{
+  /* background: #474bff;
+background: -webkit-linear-gradient(239deg, #474bff 0%, #bc48ff 100%);
+background: linear-gradient(239deg, #474bff 0%, #bc48ff 100%); */
+background-size:400px;
+background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\Me.gif");
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+  
+.font-CAS {
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .App{
+    scroll-behavior: smooth;
+  }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

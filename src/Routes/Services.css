@@ -1,0 +1,182 @@
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+
+    @media (min-width: 640px) { 
+      font-size: 18px;
+    }
+  }
+  
+  .button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+
+  .button-view {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 32px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+
+    @media (min-width: 640px) { 
+      height: 48px;
+    }
+    @media (min-width: 640px) { 
+      font-size: 18px;
+    }
+    
+  }
+  
+  .button-view:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button-view:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-view:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  .backgroundS{
+    background: rgba(255, 255, 255, 0);
+background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(245, 166, 166, 0.22) 50%, #ed3b3b 100%);
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(245, 166, 166, 0.22) 50%, #ed3b3b 100%);
+  }
+
+  .background_Mars_Left_Rover{
+    @media (min-width: 640px) { 
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;  
+    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\Mars_Cam.gif");
+    
+     }
+     @media (max-width: 640px) { 
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:  75%;  
+      background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\Mars_Cam.gif");
+      
+     }
+    
+  }
+.background_Mars_Left{
+  
+  background: rgba(255, 255, 255, 0);
+background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(119, 192, 247, 0.28) 50%, rgba(50, 53, 250, 0.72) 100%);
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(119, 192, 247, 0.28) 50%, rgba(50, 53, 250, 0.72) 100%);
+}
+.background_Mars_Right{
+  
+  background: rgba(255, 229, 0, 0.74);
+background: -webkit-linear-gradient(90deg, rgba(255, 229, 0, 0.74) 0%, rgba(245, 247, 119, 0.51) 50%, rgba(255, 255, 255, 0) 100%);
+background: linear-gradient(90deg, rgba(255, 229, 0, 0.74) 0%, rgba(245, 247, 119, 0.51) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+.S_Weather{
+  
+  @media (min-width: 640px) { 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\S_Weather.gif");
+  
+   }
+   @media (max-width: 640px) { 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25%;
+    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\S_Weather.gif");
+    
+   }
+}
+
+
+
+
+
+
+.side-bg{
+  background:
+      conic-gradient(at 18px calc(100% - 18px),#0000 270deg,#151925 0) calc(18px + 13.5px) 0,
+      linear-gradient(#1b3278 18px,#0000 0) 0 13.5px,
+      conic-gradient(at 18px calc(100% - 18px),#0000 90deg,#b4c7ff 0 180deg, #1a3893 0),
+      #082470;
+background-size: calc(2*(18px + 13.5px)) calc(2*(18px + 13.5px));
+border-radius: 7px
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rowdies:wght@300;400;700&display=swap');
+
+.welcome-name {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: yellow;
+}
+
+
