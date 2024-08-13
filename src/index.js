@@ -7,17 +7,28 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from './Components/AuthContext/AuthContext';
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Provider } from 'react-redux';
+import { Toaster } from 'react-hot-toast';
+import rootReducer from "./reducer";
+import {configureStore} from "@reduxjs/toolkit"
+
+
+const store = configureStore({
+  reducer:rootReducer,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <BrowserRouter>
-
-    <React.StrictMode>
-    <App />
-    <ToastContainer/>
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter> 
+        <App />
+        <ToastContainer/> 
+        <Toaster/>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
-  </BrowserRouter>
 
   
 );

@@ -28,7 +28,7 @@ function App() {
         <Route path='/GatheringAstrologer/AstronomyPic' element={<AstronomyPic/>}/>
         <Route path='/GatheringAstrologer/MarsRover' element={<MarsRover/>}/>
         <Route path='/GatheringAstrologer/MarsWeather' element={<MarsWeather/>}/>
-        <Route  path='/GatheringAstrologer/login' element={<Login/>}/>
+        <Route path='/GatheringAstrologer/login' element={<Login/>}/>
         <Route path='/GatheringAstrologer/signup' element={<Signup/>}/>
       </Routes>
       

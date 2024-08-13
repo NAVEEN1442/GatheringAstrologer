@@ -6,12 +6,13 @@ const AuthContext = createContext();
 
 // Create a provider component
 export function AuthProvider({ children }) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username,setUsername] = useState("");
-  const [password,setPassword] = useState("");
-  const [confirmPassword,setConfirmPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(()=>{
+    return localStorage.getItem('isLoggedIn') === 'true';
+  }
+   
+  );
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn ,username,setUsername,password,setPassword,confirmPassword,setConfirmPassword }}>
+    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );

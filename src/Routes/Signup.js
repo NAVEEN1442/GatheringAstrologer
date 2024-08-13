@@ -1,39 +1,80 @@
 import React from 'react'
-
+import { useState } from 'react';
 import { AiFillHome } from "react-icons/ai";
-
-import { motion } from "framer-motion"
+import { signUp } from '../Services/operations/authAPI';
 import { NavLink } from 'react-router-dom';
 import { SlLogin } from "react-icons/sl";
 import { useAuth } from '../Components/AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
-
-
+import { useDispatch } from 'react-redux';
+import { setSignupData } from '../slices/authSlice';
+import { useEffect } from 'react';
 
 function Welcome() {
 
-  const { setIsLoggedIn,username,password,setUsername,setPassword ,confirmPassword,setConfirmPassword} = useAuth();
-
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const {isLoggedIn,setIsLoggedIn} = useAuth();
+  useEffect(() => {
+    // Store the login status in local storage whenever it changes
+    localStorage.setItem('isLoggedIn', isLoggedIn);
+}, [isLoggedIn]);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  })
+
+  const {email,password,confirmPassword} = formData;
+
+  const handleOnChange = (e)=>{
+    setFormData((prev)=>(
+      {
+        ...prev,
+        [e.target.name] : e.target.value,
+      }
+    ))
+  }
 
 
+  const loginHandler = async (e) => {
+    console.log(typeof(email))
+    e.preventDefault();
 
-  const loginHandler = () => {
-
-    if(username.trim() === '' || password.trim() === '' || confirmPassword.trim() ===''){
+    if(email.trim() === '' || password.trim() === '' || confirmPassword.trim() ===''){
       
-      console.log("in the if")
+ 
       toast.error("All the fields are required to be filled");
 
 
-      console.log("in the toast")
+    
     }
     else if(password === confirmPassword){
-      console.log("in the if wala else")
-      setIsLoggedIn(true);
-     setUsername("");
-      navigate("/GatheringAstrologer");
+
+      setFormData(
+        {
+          email: email,
+          password: password,
+          confirmPassword: confirmPassword,
+        }
+      )
+      try {
+
+        console.log("Dispatching signup data...");
+        dispatch(setSignupData(formData));
+        console.log("Signup data dispatched.");
+        dispatch(signUp(email,password,confirmPassword,navigate))
+       
+        setIsLoggedIn(true);
+        
+      } catch (error) {
+        console.error("Error during signup:", error);
+      }
+
+   
       
     }
     else{
@@ -64,12 +105,16 @@ function Welcome() {
 
     <div className=' mt-5  items-center gap-5 flex'>
       <div className=' font-bold text-[15px]  md:text-[30px]  '>
-          Username :
+          Email :
       </div>
       <div >
-        <input  onChange={(event)=>{
-          setUsername(event.target.value);
-        }} className='text-black md:ml-28 ml-14 p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
+        <input
+
+            name='email'
+            value={email}
+
+          onChange={handleOnChange
+        } className='text-black md:ml-28 ml-14 p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
       </div>
 
     </div>
@@ -79,9 +124,9 @@ function Welcome() {
           Password :
       </div>
       <div>
-        <input type="password" onChange={(event)=>{
-          setPassword(event.target.value);
-        }} className='text-black md:ml-28 ml-14 p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
+        <input  name='password'
+            value={password}
+             type="password" onChange={handleOnChange} className='text-black md:ml-28 ml-14 p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
       </div>
     </div>
     <div className='gap-6 items-center mt-3  flex'>
@@ -89,9 +134,9 @@ function Welcome() {
           Confirm Password :
       </div>
       <div>
-        <input type="password" onChange={(event)=>{
-          setConfirmPassword(event.target.value);
-        }} className='text-black p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
+        <input  name='confirmPassword'
+            value={confirmPassword}
+             type="password" onChange={handleOnChange} className='text-black p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
       </div>
     </div>
  

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { AiFillHome } from "react-icons/ai";
 
@@ -9,17 +9,49 @@ import { SlLogin } from "react-icons/sl";
 import { useAuth } from '../Components/AuthContext/AuthContext';
 import { toast } from "react-toastify";
 import '../Routes/Routes.css'
-
+import { useDispatch } from 'react-redux';
+import { logIn } from '../Services/operations/authAPI';
+import { BsPass } from 'react-icons/bs';
+import { useEffect } from 'react';
 function Login() {
 
-  const { setIsLoggedIn,username,password,setUsername,setPassword } = useAuth();
+  const dispatch = useDispatch();
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    
+  })
+  const {email,password} = formData;
+
+  const {isLoggedIn,setIsLoggedIn} = useAuth();
+  useEffect(() => {
+    // Store the login status in local storage whenever it changes
+    localStorage.setItem('isLoggedIn', isLoggedIn);
+}, [isLoggedIn]);
+
+
+
+  const handleOnChange = (e) =>{
+
+    setFormData((prev)=>({
+      ...prev,
+      [e.target.name]:e.target.value,
+    }))
+
+}
+    
 
   const navigate = useNavigate();
 
-  const loginHandler = () => {
-    console.log(username);
-
-    if(username.trim() === '' || password.trim() === ''){
+  const loginHandler = async (e) => {
+    console.log(typeof(email));
+    console.log(typeof(password));
+    console.log(email);
+    console.log(password);
+    
+    e.preventDefault();
+    if(email.trim() === '' || password.trim() === ''){
       
       console.log("in the if")
       toast.error("Both the fields are required to be filled");
@@ -29,17 +61,11 @@ function Login() {
     }
     else{
       console.log("in the else")
+      dispatch(logIn(email,password,navigate));    
       setIsLoggedIn(true);
-      setUsername("");
       navigate("/GatheringAstrologer");
-     
-      
-    }
-   
-
-   
+    }  
   };
-
   return (
     <div className=' w-full flex justify-center items-center   gap-4 mx-auto h-screen  ' >
     <div className='login bg-contain md:bg-auto flex  border-4 h-[700px]  md:w-10/12 md:h-[600px] bg-slate-900 '>
@@ -58,12 +84,10 @@ function Login() {
 
     <div className=' mt-5  items-center gap-5 flex'>
       <div className=' font-bold text-[15px]  md:text-[30px] '>
-          Username :
+          Email :
       </div>
       <div >
-        <input onChange={(event)=>{
-          setUsername(event.target.value);
-        }} name='user' className='text-black p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
+        <input onChange={handleOnChange} name='email' value={email} className='text-black p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
       </div>
 
       
@@ -75,9 +99,7 @@ function Login() {
           Password :
       </div>
       <div>
-        <input type="password" onChange={(event)=>{
-          setPassword(event.target.value);
-        }} name='Pass'  className='text-black p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px]  text-[10px]  md:text-[15px] rounded-xl' />
+        <input type="password" onChange={handleOnChange} name='password' value={password}  className='text-black p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px]  text-[10px]  md:text-[15px] rounded-xl' />
       </div>
     </div>
 
