@@ -139,7 +139,7 @@ function Welcome() {
        
         <NavLink to="/login">
         <div className=' md:text-blue-500 text-blue-500 underline cursor-pointer'>
-          Already have an account ( LogIn )
+          Already have an account [ LogIn ]!
         </div>
         </NavLink>
     </div>

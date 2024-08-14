@@ -119,7 +119,7 @@ function Login() {
         
         <NavLink to="/signup">
         <div className=' underline  md:text-blue-500 text-blue-500 cursor-pointer'>
-          I don't have an account (Sign Up)!
+          I don't have an account  [ Sign Up ]!
         </div>
         </NavLink>
        
