@@ -123,19 +123,11 @@ function Login() {
         </div>
         </NavLink>
        
-    </div>
-    
-
-    
-</div>
-
+        </div>   
+      </div>
 
     </div>
-    
-    
         
-
-             
     </div>
   )
 }

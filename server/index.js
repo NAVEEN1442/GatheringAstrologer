@@ -8,9 +8,16 @@ require('dotenv').config();
 app.use(express.json());
 
 // CORS configuration
+const allowedOrigins = ['http://localhost:3000', 'https://gathering-astrologer.vercel.app'];
+
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    credentials: true,
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
 
 // Connect to the database
