@@ -16,12 +16,6 @@ function Welcome() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const {isLoggedIn,setIsLoggedIn} = useAuth();
-  useEffect(() => {
-    // Store the login status in local storage whenever it changes
-    localStorage.setItem('isLoggedIn', isLoggedIn);
-}, [isLoggedIn]);
-
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -67,8 +61,6 @@ function Welcome() {
         dispatch(setSignupData(formData));
         console.log("Signup data dispatched.");
         dispatch(signUp(email,password,confirmPassword,navigate))
-       
-        setIsLoggedIn(true);
         
       } catch (error) {
         console.error("Error during signup:", error);
@@ -107,7 +99,7 @@ function Welcome() {
       <div className=' font-bold text-[15px]  md:text-[30px]  '>
           Email :
       </div>
-      <div >
+      <div className='md:ml-14 ml-8' >
         <input
 
             name='email'

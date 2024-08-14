@@ -16,7 +16,7 @@
 }
 .Wet{
   @media (min-width: 640px) { 
-    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/MarsWeather.jpg");
+    background-image: url("../Components/Images/MarsWeather.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -24,7 +24,7 @@
   
    }
    @media (max-width: 640px) { 
-    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/MarsWeather.jpg");
+    background-image: url("../Components/Images/MarsWeather.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 75%;
@@ -38,7 +38,7 @@
     background-repeat: no-repeat;
    
     background-position: right bottom;
-    background-image: url("C:/Users/skuma/OneDrive/Desktop/REACT-PERSONAL/P1/app/src/Components/Images/giphy.gif");
+    background-image: url("../Components/Images/giphy.gif");
 
 }
 .temp{

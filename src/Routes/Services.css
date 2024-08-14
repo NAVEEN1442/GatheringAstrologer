@@ -110,15 +110,14 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(245, 166, 166
       background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;  
-    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\Mars_Cam.gif");
+    background-image: url("../Components/Images/Mars_Cam.gif");
     
      }
      @media (max-width: 640px) { 
       background-repeat: no-repeat;
       background-size: cover;
       background-position:  75%;  
-      background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\Mars_Cam.gif");
-      
+      background-image: url("../Components/Images/Mars_Cam.gif");
      }
     
   }
@@ -141,14 +140,14 @@ background: linear-gradient(90deg, rgba(255, 229, 0, 0.74) 0%, rgba(245, 247, 11
   @media (min-width: 640px) { 
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\S_Weather.gif");
+    background-image: url("../Components/Images/S_Weather.gif");
   
    }
    @media (max-width: 640px) { 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 25%;
-    background-image: url("C:\Users\skuma\OneDrive\Desktop\REACT-PERSONAL\P1\app\src\Components\Images\S_Weather.gif");
+    background-image: url("../Components/Images/S_Weather.gif");
     
    }
 }

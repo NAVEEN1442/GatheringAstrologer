@@ -61,8 +61,11 @@ function Login() {
     }
     else{
       console.log("in the else")
-      dispatch(logIn(email,password,navigate));    
-      setIsLoggedIn(true);
+      const loginSuccess = dispatch(logIn(email,password,navigate));    
+      if (loginSuccess) {
+        setIsLoggedIn(true);
+        navigate("/GatheringAstrologer");
+      }
       navigate("/GatheringAstrologer");
     }  
   };
@@ -86,7 +89,7 @@ function Login() {
       <div className=' font-bold text-[15px]  md:text-[30px] '>
           Email :
       </div>
-      <div >
+      <div className='md:ml-14 ml-8' >
         <input onChange={handleOnChange} name='email' value={email} className='text-black p-2 h-[20px] w-[150px]  md:h-[40px] md:w-[300px] text-[10px]  md:text-[15px] rounded-xl' />
       </div>
 
