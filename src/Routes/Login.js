@@ -77,7 +77,7 @@ function Login() {
     <div className=' pl-6  md:pl-12'>
 
 <div className=' flex items-center   h-[100px] '>
-<NavLink to="/GatheringAstrologer">
+<NavLink to="/">
 <button className=' flex gap-2 text-[20px] items-center ml-5 mt-5 w-[50px] button-30 ' ><AiFillHome /></button>
 </NavLink>
             </div>
@@ -117,7 +117,7 @@ function Login() {
   
     
         
-        <NavLink to="/GatheringAstrologer/signup">
+        <NavLink to="/signup">
         <div className=' underline  md:text-blue-500 text-blue-500 cursor-pointer'>
           I don't have an account (Sign Up)!
         </div>

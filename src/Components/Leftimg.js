@@ -14,7 +14,7 @@ function Leftimg({id}) {
   return (
     <div className='w-full h-[180px] md:h-[250px] rounded-xl   flex'>
         <div className=' w-[40%] md:w-[30%] background_Mars_Left_Rover rounded-[12px] flex items-end justify-center'>
-        <NavLink to="/GatheringAstrologer/MarsRover">
+        <NavLink to="/MarsRover">
         <button className='button-30    md:mb-4 gap-2  w-[150px] h-[50px]' >View More<GiCubes /> </button>
         </NavLink>
             

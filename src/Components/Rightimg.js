@@ -21,7 +21,7 @@ function Rightimg({id}) {
     
     <div className=' w-[40%] md:w-[30%] S_Weather rounded-lg   flex items-end justify-center'>
         
-    <NavLink to="/GatheringAstrologer/MarsWeather">
+    <NavLink to="/MarsWeather">
     <button className=' button-30 flex gap-2 md:mb-4  w-[150px] h-[50px]'>View More<GiCubes /> </button>
     </NavLink>
     </div>

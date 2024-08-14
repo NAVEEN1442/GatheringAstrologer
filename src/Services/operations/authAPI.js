@@ -27,11 +27,11 @@ export function signUp(email, password, confirmPassword, navigate) {
                 throw new Error(response.data.message);
             }
             toast.success("SignUp Successful");
-            navigate("/GatheringAstrologer/login");
+            navigate("/login");
         } catch (error) {
             console.error("SignUp API Error....", error);
             toast.error(`${error}`);
-            navigate("/GatheringAstrologer/signup");
+            navigate("/signup");
         }
         dispatch(setLoading(false))
     toast.dismiss(toastId)
@@ -53,13 +53,13 @@ export function logIn(email,password,navigate){
                 throw new Error(response.data.message);
             }
             toast.success("LogIN Successful");
-            navigate("/GatheringAstrologer");
+            navigate("/");
 
 
         } catch (error) {
             console.error("SignUp API Error....", error);
             toast.error(`${error}`);
-            navigate("/GatheringAstrologer/login");
+            navigate("/login");
         }
         dispatch(setLoading(false))
     toast.dismiss(toastId)
