@@ -17,7 +17,7 @@ function MarsWeather() {
       try{
         const rev = await fetch(API_URL);
         const data = await rev.json();
-        console.log(data);
+      
        
         const solData = Object.keys(data).slice(0,7).map(key => ({
           sol: key,
@@ -26,12 +26,12 @@ function MarsWeather() {
       }));
         setWeatherData(solData);
 
-      console.log(weatherData);
+    
       
        
       }
       catch(error){
-        console.log("error in mars weather");
+        
         setWeatherData([]);
       }
        

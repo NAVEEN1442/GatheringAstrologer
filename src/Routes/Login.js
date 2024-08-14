@@ -45,22 +45,19 @@ function Login() {
   const navigate = useNavigate();
 
   const loginHandler = async (e) => {
-    console.log(typeof(email));
-    console.log(typeof(password));
-    console.log(email);
-    console.log(password);
+ 
     
     e.preventDefault();
     if(email.trim() === '' || password.trim() === ''){
       
-      console.log("in the if")
+      
       toast.error("Both the fields are required to be filled");
 
 
-      console.log("in the toast")
+     
     }
     else{
-      console.log("in the else")
+    
       const loginSuccess = dispatch(logIn(email,password,navigate));    
       if (loginSuccess) {
         setIsLoggedIn(true);
@@ -123,8 +120,8 @@ function Login() {
         </div>
         </NavLink>
        
-        </div>   
-      </div>
+    </div>   
+    </div>
 
     </div>
         

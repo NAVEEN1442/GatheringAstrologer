@@ -15,21 +15,20 @@ export function signUp(email, password, confirmPassword, navigate) {
         const toastId = toast.loading("Loading...")
         dispatch(setLoading(true))
         try {
-            console.log("Sending signup request...");
-            console.log("SIGNUP API",SIGNUP_API)
+           
             const response = await apiConnector("POST", SIGNUP_API, {
                 email,
                 password,
                 confirmPassword,
             });
-            console.log("SIGNUP API RESPONSE............", response);
+          
             if (!response.data.success) {
                 throw new Error(response.data.message);
             }
             toast.success("SignUp Successful");
             navigate("/login");
         } catch (error) {
-            console.error("SignUp API Error....", error);
+           
             toast.error(`${error}`);
             navigate("/signup");
         }
@@ -57,7 +56,7 @@ export function logIn(email,password,navigate){
 
 
         } catch (error) {
-            console.error("SignUp API Error....", error);
+         
             toast.error(`${error}`);
             navigate("/login");
         }

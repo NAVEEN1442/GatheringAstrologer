@@ -15,7 +15,7 @@ import { AuthProvider } from './Components/AuthContext/AuthContext';
 
 
 function App() {
-  console.log("HI");
+ 
   return (
     <div className=' font-CAS overflow-scroll App  text-white flex flex-col background md:w-full overflow-x-hidden h-screen bg-blue-900 '>
   <AuthProvider>

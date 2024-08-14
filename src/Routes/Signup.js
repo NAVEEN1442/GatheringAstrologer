@@ -35,7 +35,7 @@ function Welcome() {
 
 
   const loginHandler = async (e) => {
-    console.log(typeof(email))
+    
     e.preventDefault();
 
     if(email.trim() === '' || password.trim() === '' || confirmPassword.trim() ===''){
@@ -57,9 +57,9 @@ function Welcome() {
       )
       try {
 
-        console.log("Dispatching signup data...");
+
         dispatch(setSignupData(formData));
-        console.log("Signup data dispatched.");
+     
         dispatch(signUp(email,password,confirmPassword,navigate))
         
       } catch (error) {
@@ -70,7 +70,7 @@ function Welcome() {
       
     }
     else{
-      console.log("in the  else")
+ 
       toast.error("Password and Confirm Password doesn't match");
     }
 

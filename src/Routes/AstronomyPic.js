@@ -25,8 +25,7 @@ function AstronomyPic(){
 
         const rev = await fetch(API_URL);
         const data = await rev.json();
-        console.log("data is")
-        console.log(data);
+
         setSdata(data);
        
         setLoading(false);

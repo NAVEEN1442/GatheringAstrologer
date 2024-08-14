@@ -23,7 +23,7 @@ function MarsRover() {
             
         }
         catch(error){
-            console.log("some issues aagye hai");
+           
             setMarsData([]);
         }
        
@@ -33,7 +33,7 @@ function MarsRover() {
         fetchMarsData();
     },[])
     useEffect(() => {
-        console.log("marsData updated:", marsData);
+      
     }, [marsData]);
 
     let uniqueCameras = "";
