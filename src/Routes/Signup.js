@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { AiFillHome } from "react-icons/ai";
-import { signUp } from '../Services/operations/authAPI';
+import { sendotp } from '../Services/operations/authAPI';
 import { NavLink } from 'react-router-dom';
 import { SlLogin } from "react-icons/sl";
 import { useAuth } from '../Components/AuthContext/AuthContext';
@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { useDispatch } from 'react-redux';
 import { setSignupData } from '../slices/authSlice';
 import { useEffect } from 'react';
+
 
 function Welcome() {
 
@@ -60,7 +61,7 @@ function Welcome() {
 
         dispatch(setSignupData(formData));
      
-        dispatch(signUp(email,password,confirmPassword,navigate))
+        dispatch(sendotp(email,navigate))
         
       } catch (error) {
         console.error("Error during signup:", error);

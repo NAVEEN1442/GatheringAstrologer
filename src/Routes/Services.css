@@ -179,3 +179,52 @@ border-radius: 7px
 }
 
 
+/* CSS */
+.button-67 {
+  align-items: center;
+  background: #2b2a2a;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #9e93d2;
+  cursor: pointer;
+  display: flex;
+  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  font-size: 28px;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  transition: .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  width: 80px;
+  height: 50px;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+.button-67:hover {
+  background: #3a3838;
+
+ transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+  .button-67 {
+    padding: 24px;
+  }
+}
+
+.back-satellite{
+  background: rgba(255, 254, 254, 0);
+  background: -webkit-radial-gradient(circle, rgba(255, 254, 254, 0) 0%, rgba(255, 255, 255, 0.13) 50%, rgba(255, 255, 255, 0.82) 100%);
+  background: radial-gradient(circle, rgba(255, 254, 254, 0) 0%, rgba(255, 255, 255, 0.13) 50%, rgba(255, 255, 255, 0.82) 100%);
+}
+        
+
+
+

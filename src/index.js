@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -20,19 +20,19 @@ const store = configureStore({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <React.StrictMode>
-  <AuthProvider>
-    <Provider store={store}>
-      <BrowserRouter> 
-        <App />
-        <ToastContainer/> 
-        <Toaster/>
-      </BrowserRouter>
-    </Provider>
-    </AuthProvider>
-  </React.StrictMode>
-
-  
+    
+        <AuthProvider>
+          <Provider store={store}>
+            <BrowserRouter> 
+              <App />
+              <ToastContainer/> 
+              <Toaster/>
+            </BrowserRouter>
+          </Provider>
+        </AuthProvider>
+    
+     
+             
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 const userRouter = require("./Routes/User");
 require('dotenv').config();
-
+const fetchRouter = require("./Routes/Sat_API");
 // Middleware to parse JSON requests
 app.use(express.json());
 
@@ -26,6 +26,7 @@ db.connect();
 
 // Mount API routes
 app.use("/api/v1/auth", userRouter);
+app.use("/api/v1/fetch", fetchRouter);
 
 // Basic route for testing
 app.get("/", (req, res) => {

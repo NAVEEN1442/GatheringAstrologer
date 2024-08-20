@@ -1,16 +1,18 @@
 import { toast } from "react-toastify"
 import { apiConnector } from "../apiConnector"
 import { endpoint } from "../apis"
-import { setLoading } from "../../slices/authSlice"
+import { setLoading, setToken } from "../../slices/authSlice"
+
 
 
 const {
     SIGNUP_API,
-    LOGIN_API
+    LOGIN_API,
+    OTP_API,
 } = endpoint
 
 
-export function signUp(email, password, confirmPassword, navigate) {
+export function signUp(email, password, confirmPassword, otp, navigate) {
     return async (dispatch) => {
         const toastId = toast.loading("Loading...")
         dispatch(setLoading(true))
@@ -20,6 +22,7 @@ export function signUp(email, password, confirmPassword, navigate) {
                 email,
                 password,
                 confirmPassword,
+                otp,
             });
           
             if (!response.data.success) {
@@ -52,6 +55,9 @@ export function logIn(email,password,navigate){
                 throw new Error(response.data.message);
             }
             toast.success("LogIN Successful");
+            dispatch(setToken(response.data.token))
+            localStorage.setItem("token",JSON.stringify(response.data.token))
+
             navigate("/");
 
 
@@ -65,3 +71,33 @@ export function logIn(email,password,navigate){
     }
 }
 
+export function sendotp(email,navigate){
+    return async(dispatch) =>{
+        const toastId = toast.loading("Loading...")
+        dispatch(setLoading(true))
+
+        const response = await apiConnector("POST",OTP_API,{
+            email,
+        })
+        if (!response.data.success) {
+            throw new Error(response.data.message);
+        }
+        toast.success("Otp Sent: Check Your Gmail");
+        navigate("/verifyEmail",{state:{email}});
+
+
+
+        
+        dispatch(setLoading(false))
+    toast.dismiss(toastId)
+    }
+}
+
+export function logout(navigate){
+    return (dispatch)=>{
+        dispatch(setToken(null))
+        localStorage.removeItem("token")
+        toast.success("Logged Out")
+        navigate("/")
+    }
+}

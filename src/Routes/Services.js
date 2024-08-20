@@ -7,8 +7,11 @@ import Leftimg from '../Components/Leftimg';
 import Rightimg from '../Components/Rightimg';
 import { NavLink } from 'react-router-dom';
 import './Services.css'
+import satellite from '../Components/Images/R_satellite.webp';
 
 function Services() {
+
+
 
   return (
     <div className='h-screen flex flex-col  w-full'>
@@ -61,6 +64,47 @@ function Services() {
 
 
             </div>
+
+            <div className='  border-gray-600 border-2 rounded-md h-[5px] mx-auto my-8 w-10/12'></div>
+
+            <div className='flex gap-4 flex-col justify-center items-center'>
+
+                <div className=' text-[40px]'>Ever Heard about <span className=' h1-font text-[50px] text-orange-500' >Satellite</span></div>
+
+                <div className=' justify-center gap-8 items-center flex flex-col'>
+                  <div className=' text-gray-600 text-[12px]'>
+                  A satellite is an artificial or natural object that orbits a planet or celestial body, used for communication, navigation, observation, or research purposes.
+                  </div>
+                  <div className='w-9/12 hover:scale-105 transition-all back-satellite border-4 rounded-lg flex items-center justify-evenly '>
+                    <div className=' p-6 flex flex-col items-center justify-center gap-20   w-[60%]' >
+                          <div className='flex items-center justify-center align-middle' >
+                          Tracking various satellites involves monitoring their real-time positions as they orbit the Earth or other celestial bodies. This process uses data from ground
+                        stations and satellite networks to update their locations and trajectories continuously.
+                          By tracking satellites, we can ensure accurate communication, navigation, and data 
+                          collection.
+                          </div>
+
+
+                          <div className='flex gap-4' > <span className='h1-font text-blue-600 text-[25px]'>Let The Tracking </span>
+                          <NavLink to="/Satellite">
+                          <button className=' flex items-center gap-3 button-30'>Begin<GiCubes /></button>
+                          </NavLink>
+                            
+                          </div>
+
+                          
+                      </div>
+                      <div className=' border-dotted border-gray-600 border-2 ' ></div>
+                    <div className='  w-[30%]'>
+                      <img className=' w-[100%]  ' src={satellite} />
+                    </div>
+                   
+                  </div>
+                </div>
+            
+            </div>
+
+            
 
 
             <div>

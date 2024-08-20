@@ -1,11 +1,20 @@
 
 import img1 from '../Components/Images/LogoT.jpg'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useAuth } from '../Components/AuthContext/AuthContext';
+import { logout } from '../Services/operations/authAPI';
+import { useDispatch } from 'react-redux';
 
 function Navbar() {
   const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const logoutHandler = () =>{
+    setIsLoggedIn(false)
+    dispatch(logout(navigate));
+  }
 
   return (
     <div className=' md:gap-0 gap-40  mx-auto mt-3 text-white justify-evenly font-bold text-[22px] rounded-xl flex items-center w-11/12  '>
@@ -25,7 +34,7 @@ function Navbar() {
         <div>
         {
           isLoggedIn ? (
-            <button onClick={()=>{setIsLoggedIn(false)}} className='button-30'>LogOut</button>
+            <button onClick={logoutHandler} className='button-30'>LogOut</button>
 
           ) : (
             

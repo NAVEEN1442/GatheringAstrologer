@@ -61,9 +61,9 @@ function Login() {
       const loginSuccess = dispatch(logIn(email,password,navigate));    
       if (loginSuccess) {
         setIsLoggedIn(true);
-        navigate("/GatheringAstrologer");
+        navigate("/");
       }
-      navigate("/GatheringAstrologer");
+      navigate("/");
     }  
   };
   return (

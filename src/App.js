@@ -8,9 +8,11 @@ import MarsRover from './Routes/MarsRover';
 import MarsWeather from './Routes/MarsWeather';
 import Login from './Routes/Login';
 import Signup from "./Routes/Signup";
-
+import Satellite from './Routes/Satellite';
 
 import { AuthProvider } from './Components/AuthContext/AuthContext';
+import OTP from './Routes/OTP';
+import PrivateRoute from './Routes/PrivateRoute';
 
 
 
@@ -30,7 +32,14 @@ function App() {
         <Route path='/MarsWeather' element={<MarsWeather/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
-      </Routes>
+        <Route path='/verifyEmail' element={<OTP/>}/>
+        
+        <Route path='/Satellite' element={
+          <PrivateRoute>
+                <Satellite/>
+          </PrivateRoute>
+                }/>
+  </Routes>
       
   </AuthProvider>
 
