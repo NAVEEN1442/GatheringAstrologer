@@ -6,7 +6,7 @@ import { Navigate } from 'react-router-dom';
 function PrivateRoute({children}) {
   
     const {token} = useSelector((state)=>state.auth);
-    console.log("token",token);
+  
     
 
     if(token === null){

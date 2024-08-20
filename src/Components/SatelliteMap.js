@@ -36,7 +36,7 @@ function SatelliteMap({ line1, line2 }) {
 
       return { latitude, longitude };
     } catch (error) {
-      console.error('Error calculating satellite position:', error);
+     
       return null;
     }
   };

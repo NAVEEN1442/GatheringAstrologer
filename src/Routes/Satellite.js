@@ -47,7 +47,7 @@ function Satellite() {
   
     let fetchDataByID = async(satID) =>{
         setLoading(true);
-        console.log("satid",satID);
+
          const response = await dispatch(satelliteData(satID,navigate));
 
          setSpecificData({
@@ -57,15 +57,14 @@ function Satellite() {
             line2:response.data.line2,
          })
 
-        console.log("res",response);
-        console.log("sdata",specificData);
+       
         setLoading(false);
     }
 
     const fetchData = async()=>{
         setLoading(true);
         const response = await dispatch(satelliteData(null,navigate));   
-        console.log(response);
+    
 
         if(response && response.data && response.data.member ){
            const names = response.data.member.map((item)=> item.name)

@@ -14,7 +14,7 @@ function OTP() {
     const dispatch = useDispatch();
     const {signupData} = useSelector((state)=>state.auth)
 
-    console.log("email in otp",email)
+
 
     const verifyAndSignup = () =>{
 
